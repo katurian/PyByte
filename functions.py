@@ -3,6 +3,11 @@ import requests
 
 authtoken = 'XXXXXXEXNFWBXXXXXXYCZRXXXX'
 
+def searchUsers(query):
+    r = requests.get(f'https://api.byte.co/account/prefix/{query}', headers={'Authorization': authtoken})
+    resultJSON = r.json()
+    return resultJSON
+
 def getFeed():
     r = requests.get('https://api.byte.co/feed/global', headers={'Authorization': authtoken})
     feedJSON = r.json()
