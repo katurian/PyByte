@@ -43,10 +43,16 @@ def getUserInfo(userID):
     
 def likePost(postID):
     requests.put(f'https://api.byte.co/post/id/{postID}/feedback/like', headers={'Authorization': authtoken}, verify=False)
+    
+def unlikePost(postID):
+    requests.delete(f'https://api.byte.co/post/id/{postID}/feedback/like', headers={'Authorization': authtoken}, verify=False)
   
 def commentPost(postID):
     requests.post(f'https://api.byte.co/post/id/{postID}/feedback/comment', headers={'Authorization': authtoken}, json={'body':'comment'}, verify=False)
  
+def deleteComment(postID, commentID):
+    requests.delete(f'https://api.byte.co/post/id/{postID}/feedback/comment/id/{commentid}', headers={'Authorization': authtoken}, verify=False)    
+    
 def rebytePost(postID):
     requests.put(f'https://api.byte.co/post/id/{postID}/rebyte', headers={'Authorization': authtoken}, verify=False)
     
