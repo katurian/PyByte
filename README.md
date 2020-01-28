@@ -35,13 +35,23 @@ searchUsers()|/account/prefix/{query}|query|Queries a string and returns a JSON 
 getAccountInfo()|/account/me|N/A|Returns a JSON containing your account information.
 setBio()|/account/me|bioText|Sets your profile biography to bioText.
 setColor()|/account/me|scheme |Takes an integer from 1 to 17, each representing a different color scheme, and sets your profile's scheme accordingly.
-getBlockedList()|/account/me/blocking|N/A|Returns a JSON of users you are currently blocking.
-getMyPosts()|/account/me/posts|N/A|Returns a JSON of your post titles, likes, rebytes, comments, etc.
+getBlockedList()|/account/me/blocking| |Returns a JSON of users you are currently blocking.
+getMyPosts()|/account/me/posts| |Returns a JSON of your post titles, likes, rebytes, comments, etc.
 getUserPosts()|account/id/{userID}/posts|userID|Takes a user's ID, represented as a string, and returns a JSON of their post titles, likes, rebytes, comments, etc.
 getUserInfo()|/account/id/{userID}|userID|Takes a user's ID, represented as a string, and returns a JSON of their account information.
 followUser()|/account/id/{userID}/follow|userID|Follows a user given their ID.
 blockUser()|/account/id/{userID}/block|userID|Blocks a user given their ID.
+getFeed()|/feed/global|N/A|Returns a JSON of users and posts. 
+rebytePost()|post/id/{postID}/rebyte|postID|Rebytes a post given its ID.
+reportPost()|/post/id/{postID}/report|postID|Reports a post given its ID.
+commentPost()|/post/id/{postID}/feedback/comment|postID|Comments on a post given its ID.
+likePost()|/post/id/{postID}/feedback/like|postID|Likes a post given its ID.
+unlikePost()|/post/id/{postID}/feedback/like|postID|Unlikes a post given its ID.
+deleteComment()|/post/id/{postID}/feedback/comment/id/{commentid}|postID, commentID|Deletes a comment given a post ID and a comment ID, only works on your own post and on your own comment.
 
+![colors1](https://cdn.discordapp.com/attachments/397194055995490308/671745842067275786/image0.png)
+
+![colors2](https://cdn.discordapp.com/attachments/397194055995490308/671745842478055444/image1.png)
 
 ## Contributing
 Pull requests are welcome. Feel free to email me at **katekulinski@gmail.com** or message me at **genova#6601** if you have any questions.
