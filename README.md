@@ -29,7 +29,18 @@ Replace ``'XXXXXXEXNFWBXXXXXXYCZRXXXX'`` with the token you just received. Now y
 
 ## Functions
 
-To be added.
+**Function**|**Endpoint**|**Parameters**|**Description**
+:-----:|:-----:|:-----:|:-----:
+searchUsers()|/account/prefix/{query}|query|Queries a string and returns a JSON of users with similar names along with their profile information.
+getAccountInfo()|/account/me|N/A|Returns a JSON containing your account information.
+setBio()|/account/me|bioText|Sets your profile biography to bioText.
+setColor()|/account/me|scheme |Takes an integer from 1 to 17, each representing a different color scheme, and sets your profile's scheme accordingly.
+getBlockedList()|/account/me/blocking| |Returns a JSON of users you are currently blocking.
+getMyPosts()|/account/me/posts| |Returns a JSON of your post titles, likes, rebytes, comments, etc.
+getUserPosts()|account/id/{userID}/posts|userID|Takes a user's ID, represented as a string, and returns a JSON of their post titles, likes, rebytes, comments, etc.
+getUserInfo()|/account/id/{userID}|userID|Takes a user's ID, represented as a string, and returns a JSON of their account information.
+followUser()|/account/id/{userID}/follow|userID|Follows a user given their ID.
+blockUser()|/account/id/{userID}/block|userID|Blocks a user given their ID.
 
 
 ## Contributing
