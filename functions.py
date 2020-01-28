@@ -20,6 +20,9 @@ def getAccountInfo():
     r = requests.get('https://api.byte.co/account/me', headers={'Authorization': authtoken}, verify=False)
     accountJSON = r.json()
     return accountJSON
+
+def setBio(bioText):
+    requests.put('https://api.byte.co/account/me', headers={'Authorization': authtoken}, json={'bio': bioText}, verify=False)
     
 def getBlockedList():
     r = requests.get('https://api.byte.co/account/me/blocking', headers={'Authorization': authtoken}, verify=False)
