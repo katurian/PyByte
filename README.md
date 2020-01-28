@@ -13,7 +13,7 @@ node auth.js
 ```
 Another cmd.exe window will pop up, with directions to go to this oauth login page:
 
-![oauth](https://github.com/katurian/PyByte/blob/master/oauth.PNG)
+![oauth](https://github.com/katurian/PyByte/blob/master/oauth.PNG =250x300)
 
 Sign in through Google and follow the rest of the directions. Your Authentication Token will print to the cmd.exe window.
 
