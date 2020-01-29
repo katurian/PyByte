@@ -48,7 +48,7 @@ commentPost()|/post/id/{postID}/feedback/comment|postID|Comments on a post given
 likePost()|/post/id/{postID}/feedback/like|postID|Likes a post given its ID.
 unlikePost()|/post/id/{postID}/feedback/like|postID|Unlikes a post given its ID.
 deleteComment()|/post/id/{postID}/feedback/comment/id/{commentid}|postID, commentID|Deletes a comment given a post ID and a comment ID, only works on your own post and on your own comment.
-deleteComment()|/post/id/{postID}/feedback/comment/id/{commentid}|postID, commentID|Deletes a comment given a post ID and a comment ID, only works on your own post and on your own comment.
+postVideo()|/upload & /post|videoName, categoryName, captionText|Uploads and posts a video given three string parameters: the MP4 file name, one of twenty post categories (comedy, animation, chill, pets, cute, magic, art, experimental, wierd, voices, anime, gaming, fitness, sports, music, food, style, beauty, screenies, travel), and the video's caption text.
 
 ![colors1](https://cdn.discordapp.com/attachments/397194055995490308/671745842067275786/image0.png)
 
