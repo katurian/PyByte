@@ -46,6 +46,13 @@ def getUserInfo(userID):
     r = requests.get(f'https://api.byte.co/account/id/{userID}', headers={'Authorization': authtoken}, verify=False)
     userJSON = r.json()
     return userJSON
+
+def postMP4(MP4Name, categoryName):
+    upload = requests.post("https://api.byte.co/upload", headers={'Content-Type': 'application/json', 'Authorization': authtoken}, json={'contentType': 'video/mp4'})
+    uploadID = upload.json()['data']['uploadID']
+    uploadURL = upload.json()['data']['uploadURL']
+    requests.put(uploadURL, headers={'Content-Type':'video/mp4','Authorization': authtoken}, data=open(MP4Name, 'rb').read())
+    requests.post('https://api.byte.co/post', headers={'Content-Type':'video/mp4','Authorization': authtoken}, json={'category':categoryName,'videoUploadID': uploadID,'thumbUploadID': uploadID,'caption':'test'})
     
 def likePost(postID):
     requests.put(f'https://api.byte.co/post/id/{postID}/feedback/like', headers={'Authorization': authtoken}, verify=False)
