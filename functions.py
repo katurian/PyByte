@@ -25,7 +25,7 @@ def setBio(bioText):
     requests.put('https://api.byte.co/account/me', headers={'Authorization': authtoken}, json={'bio': bioText}, verify=False)
     
 def setColor(scheme):
-    requests.put('https://api.byte.co/account/me', headers={'Authorization': authtoken}, json={"colorScheme": scheme}, verify=False)
+    requests.put('https://api.byte.co/account/me', headers={'Authorization': authtoken}, json={'colorScheme': scheme}, verify=False)
     
 def getBlockedList():
     r = requests.get('https://api.byte.co/account/me/blocking', headers={'Authorization': authtoken}, verify=False)
